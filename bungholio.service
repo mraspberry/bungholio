@@ -1,0 +1,13 @@
+[Unit]
+Description=Run bungholio to check amazon for items
+
+[Service]
+Type=simple
+WorkingDirectory=WORKING_DIRECTORY
+ExecStart=/usr/bin/node WORKING_DIRECTORY/index.js
+TimeoutSec=1min
+User=USER
+Group=GROUP
+
+[Install]
+WantedBy=multi-user.target
